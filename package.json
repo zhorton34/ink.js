@@ -3,6 +3,8 @@
 	"version": "1.0.0",
 	"description": "Simplified Filesystem/Scaffold Generator ('npm ink up:test')",
 	"main": "dist/index.js",
+	"bin" : { "inc.js" : "./cli.js" },
+
 	"scripts": {
 		"all": "npm run build && npm test",
 		"pretest": "npm run transpile",

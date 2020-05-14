@@ -1,4 +1,4 @@
-### NPM
+### Install Development
 
 ```bash
 npm install --save-dev {repo}

@@ -1,0 +1,11 @@
+
+'use strict';
+
+/**
+ * Example Api Method
+ *
+ * @param name
+ */
+module.exports.example = function example(name = 'hello world') {
+	return console.log(name);
+};

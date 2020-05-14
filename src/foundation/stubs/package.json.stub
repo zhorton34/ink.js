@@ -1,0 +1,21 @@
+{
+  "name": "{repo}",
+  "version": "{version}",
+  "description": "{description}",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "{version_control_short_name}",
+    "url": "{version_control_short_name}+https://{version_control_host}/{account}/{repo}.{version_control_ext}"
+  },
+  "author": ["{author}"],
+  "license": "{license_type}",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "bugs": {
+    "url": "https://{version_control_host}/{account}/{repo}/issues"
+  },
+  "homepage": "https://{version_control_host}/{account}/{repo}#readme",
+}

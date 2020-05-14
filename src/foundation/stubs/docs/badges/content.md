@@ -1,0 +1,6 @@
+[![Travis](https://img.shields.io/travis/{account}/{repo}/master.svg?style=flat-square)](https://travis-ci.org/{account}/{repo}/builds)
+[![npm downloads](https://img.shields.io/npm/dm/{repo}.svg?style=flat-square)](http://badge.fury.io/js/{repo})
+[![dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat-square)](https://{version_control_host}/{account}/{repo}/blob/master/package.json)
+[![npm license](https://img.shields.io/npm/l/{repo}.svg?style=flat-square)](http://badge.fury.io/js/{repo})
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![npm version](https://img.shields.io/npm/v/{repo}.svg?style=flat-square)](http://badge.fury.io/js/{repo})

@@ -1,4 +1,4 @@
-### CDN
+### Install CDN
 > `No Yarn Or Npm? No Problem, use our CDN Link`
 
 **https://unpkg.com/{repo}@{version}/build/index.js**

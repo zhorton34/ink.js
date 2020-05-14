@@ -1,10 +1,9 @@
 
 'use strict';
 
-const repl = require('repl');
-
-const { file } = require('./file/index.js');
-const { directory } = require('./directory/index.js');
+const { file } = require('./file.js');
+const { settings } = require('./settings.js');
+const { directory } = require('./directory.js');
 
 module.exports.file = file;
 module.exports.directory = directory;

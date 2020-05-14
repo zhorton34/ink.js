@@ -1,0 +1,61 @@
+
+'use strict';
+
+/*-------------------------------------------------------------------------
+ * Create Function, Ultimately Initializing Prototype With Default Options
+ *-------------------------------------------------------------------------
+ * Sets up ability to run "new {default_prototype_name}(options = {})"
+ * Although somewhat confusing, prototypes are extremely powerful.
+ * Due to common confusion, we will wrap "new {default_prototype_name}"
+ * within a helper function and export both the prototype and
+ * its associated helper function that handles newing
+ * up the prototype
+ *-------------------------------------------------------------------------*/
+
+ const {default_prototype_name} = function (options = {}) {
+    this.options = options;
+ };
+
+/*-------------------------------------------------------------------------
+ * Register Api Methods To Our Prototype (src/api/{api_method}.js)
+ *-------------------------------------------------------------------------
+ * All files saved within src/api/{api_method}.js should be an api
+ * method and all API methods should be added to this prototype
+ *-------------------------------------------------------------------------*/
+ const macro = require('./api/macro.js');
+ const example = require('./api/example.js');
+
+ {default_prototype_name}.prototype.macro = macro;
+ {default_prototype_name}.prototype.example = example;
+
+
+/*-------------------------------------------------------------------------
+ * Create Helper Function To Wrap Prototype
+ *-------------------------------------------------------------------------
+ * Avoid the need to use "new" keyword when implementing
+ * this package via npm or via cdn. Less js confusion.
+ *-------------------------------------------------------------------------*/
+
+ const {default_export} = function (options = {}) {
+    return new {default_prototype_name}(options);
+ };
+
+
+/*----------------------------------------------------------------------------
+ * Use module.exports to support the following imports syntax
+ *----------------------------------------------------------------------------
+ * 1. import * as Example from '{repo}'
+ * 2. import Example from '{repo}'
+ * 3. import { {default_export} } from '{repo}'
+ * 4. import { {default_prototype_name} } from '{repo}'
+ * 5. const {default_export} = require('{repo}');
+ * 6. const { {default_export} } = require('{repo}').default;
+ * 7. const { {default_prototype_name} } = require('{repo}');
+ * 8. const { {default_export}, {default_prototype_name} = require('{repo}');
+ *----------------------------------------------------------------------------*/
+
+ module.exports = {default_export};
+ module.exports.default = {default_export};
+ module.exports.{default_export} = {default_export};
+ module.exports.{default_prototype_name} = {default_prototype_name};
+
